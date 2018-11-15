@@ -4,7 +4,7 @@ peline {
         stage ("build")
         {
             steps{
-                echo "building 1"
+                echo "building 1 anncncncn"
             }
             
         }
