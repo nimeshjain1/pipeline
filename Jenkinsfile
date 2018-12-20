@@ -5,7 +5,7 @@ pipeline {
         {
             steps{
                 echo "building 1 anncncncn";
-		cd docker
+		sh 'cd docker'
             }
         }
         stage ("test")
