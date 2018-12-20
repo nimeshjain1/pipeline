@@ -6,6 +6,7 @@ pipeline {
             steps{
                 echo "building 1 anncncncn";
 		sh 'cd docker'
+		sh 'docker build -t mycont .'
             }
         }
         stage ("test")
