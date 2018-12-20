@@ -5,6 +5,8 @@ pipeline {
         {
             steps{
                 echo "building 1 anncncncn"
+		cd docker;
+                docker build -t myweb .
             }
             
         }
