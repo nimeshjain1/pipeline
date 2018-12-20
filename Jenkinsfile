@@ -3,11 +3,7 @@ pipeline {
     stages {
         stage ("build")
         {
-            steps{
                 echo "building 1 anncncncn"
-		#cd docker
-                #docker build -t myweb .
-            }
             
         }
         stage ("test")
