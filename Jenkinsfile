@@ -4,7 +4,8 @@ pipeline {
         stage ("build")
         {
             steps{
-                echo "building 1 anncncncn"
+                echo "building 1 anncncncn";
+		cd docker
             }
         }
         stage ("test")
