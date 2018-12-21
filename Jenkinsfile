@@ -5,8 +5,8 @@ pipeline {
         {
             steps{
                 echo "building 1 anncncncn";
-		sh 'cd docker'
-		sh '/bin/docker build -t mycont .'
+		sh 'pwd'
+		//sh '/bin/docker build -t mycont .'
             }
         }
         stage ("test")
