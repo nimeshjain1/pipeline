@@ -6,7 +6,9 @@ pipeline {
             steps{
                 echo "building 1 anncncncn";
 		sh 'pwd'
-		//sh '/bin/docker build -t mycont .'
+		dir('/home/cloud_user/pipeline') {
+			sh '/bin/docker build -t mycont .'
+		}
             }
         }
         stage ("test")
