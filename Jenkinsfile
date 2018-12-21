@@ -1,7 +1,7 @@
 pipeline {
     agent{
       dockerfile {
-	args '-t myweb2'
+	args '-t myweb1'
 	dir 'docker'
 	filename 'Dockerfile'
       }
