@@ -15,7 +15,7 @@ pipeline {
                 echo "building 1 anncncncn";
 		//sh 'docker build -t myweb .'
 		dir('/home/cloud_user/pipeline') {
-			#sh 'docker build -t mycont .'
+			//sh 'docker build -t mycont .'
 			sh 'pwd'
 		}
             }
