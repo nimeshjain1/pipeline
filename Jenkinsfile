@@ -20,6 +20,7 @@ pipeline {
 			}*/
 			sh 'echo $PATH'
 			sh 'which docker'
+			sh 'echo $PWD'
 		}
 		}
 		stage ("test")
