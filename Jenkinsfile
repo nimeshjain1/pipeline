@@ -15,10 +15,12 @@ pipeline {
             	steps{
                 	echo "building 1 anncncncn";
 			//sh 'docker build -t myweb .'
-			dir('/home/cloud_user/pipeline') {
+			/*dir('/home/cloud_user/pipeline') {
 				//sh 'docker build -t mycont .'
 				sh 'pwd'
-			}
+			}*/
+			sh 'echo $PATH'
+			sh 'which docker'
             	}
        		}
         	stage ("test")
