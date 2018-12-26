@@ -14,7 +14,7 @@ pipeline {
 		steps{
 			echo "building 1 anncncncn";
 			//sh 'docker build -t myweb .'
-			dir('/home') {
+			dir('/home/') {
 				//sh 'docker build -t mycont .'
 				sh 'pwd'
 			}
