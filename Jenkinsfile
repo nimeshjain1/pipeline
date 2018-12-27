@@ -15,7 +15,7 @@ pipeline {
 				echo "building 1 anncncncn";
 				sh 'docker version'
 				sh 'who am i'
-				/*dir('/home/cloud_user') {
+				dir('jenkins@/home/cloud_user') {
 					//sh 'docker build -t mycont .'
 					sh 'pwd'
 				}*/
