@@ -13,11 +13,11 @@ pipeline {
 		{
 			steps{
 				echo "building 1 anncncncn";
-				//sh 'docker build -t myweb .'
-				dir('/') {
+				sh 'docker version'
+				/*dir('/') {
 					//sh 'docker build -t mycont .'
 					sh 'pwd'
-				}
+				}*/
 				sh 'echo $PATH'
 				sh 'which docker'
 				sh 'echo $PWD'
