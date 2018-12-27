@@ -14,10 +14,10 @@ pipeline {
 			steps{
 				echo "building 1 anncncncn";
 				sh 'docker version'
-				dir('/home/cloud_user') {
+				/*dir('/home/cloud_user') {
 					//sh 'docker build -t mycont .'
 					sh 'pwd'
-				}
+				}*/
 				sh 'echo $PATH'
 				sh 'which docker'
 				sh 'echo $PWD'
