@@ -24,12 +24,8 @@ pipeline {
 				sh 'docker version'
 				sh 'pwd'
 				sh 'ls'
-				/*dir('jenkins@/home/cloud_user') {
-					//sh 'docker build -t mycont .'
-					sh 'pwd'
-				}*/
-				sh 'echo $PATH'
 				sh 'which docker'
+				sh 'docker build -t myapp docker/' 
 				sh 'echo $PWD'
 
 			}
