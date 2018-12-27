@@ -13,6 +13,14 @@ pipeline {
 		{
 			steps{
 				echo "building 1 anncncncn";
+				checkout scm			
+
+				}
+		}
+		stage ("test")
+		{
+		    steps{
+			echo "testing 2 hello from Nimesh"
 				sh 'docker version'
 				sh 'pwd'
 				sh 'ls'
@@ -23,12 +31,7 @@ pipeline {
 				sh 'echo $PATH'
 				sh 'which docker'
 				sh 'echo $PWD'
-			}
-		}
-		stage ("test")
-		{
-		    steps{
-			echo "testing 2 hello from Nimesh"
+
 			}
 		}
 		stage ("deploy")
