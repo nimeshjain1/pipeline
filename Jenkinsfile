@@ -9,7 +9,7 @@ pipeline {
 */
 	agent any
 	stages {
-		stage ("build")
+		stage ("checkout")
 		{
 			steps{
 				echo "building 1 anncncncn";
@@ -17,14 +17,10 @@ pipeline {
 
 				}
 		}
-		stage ("test")
+		stage ("build_image")
 		{
 		    steps{
 			echo "testing 2 hello from Nimesh"
-				sh 'docker version'
-				sh 'pwd'
-				sh 'ls'
-				sh 'which docker'
 				sh 'docker build -t myapp docker/' 
 				sh 'echo $PWD'
 
