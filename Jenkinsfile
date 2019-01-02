@@ -14,7 +14,7 @@ pipeline {
 		    steps{
 			echo "testing 2 hello from Nimesh"
 				sh 'docker build -t myapp docker/' 
-				sh 'echo $PWD'
+				echo env.workspace
 
 			}
 		}
