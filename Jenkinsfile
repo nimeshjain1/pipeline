@@ -1,12 +1,4 @@
 pipeline {
-/*    agent{
-      dockerfile {
-//	args '-t myweb1'
-	dir 'docker'
-	filename 'Dockerfile'
-      }
-    }
-*/
 	agent any
 	stages {
 		stage ("checkout")
