@@ -24,8 +24,8 @@ pipeline {
 		steps{
 			dir('helm') {
 				echo "deploying"
-				sh 'echo pwd'
 				sh 'helm lint test'
+				sh 'helm package test'
 			}	
 		 }
 		}
