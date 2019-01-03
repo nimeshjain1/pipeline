@@ -15,7 +15,7 @@ pipeline {
 		{
 		    steps{
 			echo "testing 2 hello from Nimesh"
-				sh 'docker build -t myapp docker/' 
+				//sh 'docker build -t myapp docker/' 
 				echo env.workspace
 				sh 'helm create mytest'	
 				sh 'git --version'
