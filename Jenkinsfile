@@ -16,17 +16,17 @@ pipeline {
 		    steps{
 			echo "testing 2 hello from Nimesh"
 				sh 'docker build -t myapp docker/' 
-				echo env.workspace
-				sh 'helm create mytest'	
-				sh 'git --version'
-				sh 'helm --help'
 
 			}
 		}
-		stage ("deploy")
+		stage ("build_helmchart")
 		{
 		steps{
-			echo "deploying"
+			dir('helm') {
+				echo "deploying"
+				sh 'echo pwd'
+				sh 'helm lint test'
+			}	
 		 }
 		}
 	}
