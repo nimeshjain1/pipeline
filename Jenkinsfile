@@ -24,6 +24,7 @@ pipeline {
 		steps{
 			dir('helm') {
 				echo "deploying"
+				sh 'helm init --client-only'
 				sh 'helm lint test'
 				sh 'helm package test'
 			}	
