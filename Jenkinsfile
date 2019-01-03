@@ -19,6 +19,7 @@ pipeline {
 				echo env.workspace
 				//sh 'helm create mytest'	
 				sh 'git --version'
+				sh 'helm --help'
 
 			}
 		}
