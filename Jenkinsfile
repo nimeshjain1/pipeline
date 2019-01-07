@@ -1,7 +1,8 @@
 pipeline {
-	#agent {
+/*	#agent {
 	#     label 'slave1'
 	#}
+*/
 	agent any
 	stages {
 		stage ("checkout")
