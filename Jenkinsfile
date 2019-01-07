@@ -1,13 +1,13 @@
 pipeline {
-	agent {
-	     label 'slave1'
-	}
+	#agent {
+	#     label 'slave1'
+	#}
 	
 	stages {
 		stage ("checkout")
 		{
 			steps{
-				echo "building 1 anncncncn";
+				echo "building 1 checkout";
 				checkout scm			
 
 				}
@@ -15,6 +15,7 @@ pipeline {
 		stage ("build_image")
 		{
 		    steps{
+				echo "building 1 baking image";
 				sh 'docker build -t myapp docker/' 
 				// add the image to the repository in icp. 
 
