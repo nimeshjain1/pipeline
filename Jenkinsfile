@@ -22,10 +22,10 @@ pipeline {
 
 			}
 		}
-		stage ("build_helmchart")
+/*		stage ("build_helmchart")
 		{
 		steps{
-/*
+
 			dir('helm') {
 				echo "deploying"
 				sh 'helm init --client-only'
@@ -33,8 +33,10 @@ pipeline {
 				sh 'helm package test'
 				archiveArtifacts 'test-0.1.0.tgz'
 			}	
-*/
+
 		 }
 		}
+*/
+
 	}
 }
