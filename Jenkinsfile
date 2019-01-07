@@ -16,7 +16,7 @@ pipeline {
 		stage ("build_image")
 		{
 		    steps{
-				echo "building 2 baking image";
+				echo "step 2 baking image";
 			//	sh 'docker build -t myapp docker/' 
 				// add the image to the repository in icp. 
 
