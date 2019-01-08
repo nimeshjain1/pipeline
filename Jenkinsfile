@@ -17,10 +17,8 @@ pipeline {
 		{
 		    steps{
 				echo "step 2 baking image";
-				sh 'whoami'
-				sh 'pwd'
-				sh 'ls -l'	
-				sh 'docker build -t myapp docker/' 
+				sh 'docker build -t mycluster.icp:8500/testnimesh/myapp docker/' 
+				sh 'docker push mycluster.icp:8500/testnimesh/myapp'
 				// add the image to the repository in icp. 
 
 			}
