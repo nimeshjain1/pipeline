@@ -22,7 +22,7 @@ pipeline {
 		{
 		    steps{
 				echo "step 2 baking image";
-				dir('docker')
+				dir('docker'){
 				script {	
 				docker.build registry+dockerImage+":$BUILD_NUMBER"
 				}
