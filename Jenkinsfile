@@ -25,7 +25,7 @@ pipeline {
 				dir('docker'){
 				script {	
 				docker.build registry+dockerImage+":$BUILD_NUMBER"
-				docker.withRegistry('',registrycredentials) {
+				docker.withRegistry('',registryCredential) {
 					(registry+dockerImage+":$BUILD_NUMBER").push()
 				}
 				}
