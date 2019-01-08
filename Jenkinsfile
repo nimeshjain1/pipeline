@@ -17,6 +17,7 @@ pipeline {
 		{
 		    steps{
 				echo "step 2 baking image";
+				sh 'whoami'
 				sh 'docker build -t myapp docker/' 
 				// add the image to the repository in icp. 
 
