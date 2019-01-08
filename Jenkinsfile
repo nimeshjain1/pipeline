@@ -22,7 +22,9 @@ pipeline {
 		{
 		    steps{
 				echo "step 2 baking image";
+				script {	
 				docker.build registry+":$BUILD_NUMBER"
+				}
 				//sh 'docker build -t mycluster.icp:8500/testnimesh/myapp docker/' 
 				//sh 'docker login https://mycluster.icp:8500/ -u admin -p admin'
 				//sh 'docker push mycluster.icp:8500/testnimesh/myapp'
