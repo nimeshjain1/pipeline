@@ -23,8 +23,8 @@ pipeline {
 		{
 		    steps{
 				echo "step 2 baking image";
-				script {	
-				/*docker.withRegistry('http://mycluster.icp:8500',registryCredential) {
+				/*script {	
+				docker.withRegistry('http://mycluster.icp:8500',registryCredential) {
 					def image = docker.build(registry+dockerImage+":$BUILD_NUMBER", 'docker')
 					image.push("latest")
 				}
