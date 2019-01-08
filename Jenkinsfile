@@ -23,16 +23,18 @@ pipeline {
 		{
 		    steps{
 				echo "step 2 baking image";
-				/*script {	
+				script {	
 				docker.withRegistry('http://mycluster.icp:8500',registryCredential) {
 					def image = docker.build(registry+dockerImage+":$BUILD_NUMBER", 'docker')
 					image.push("latest")
 				}
-				} */
+				} 
+				/*
 				sh 'docker build -t mycluster.icp:8500/testnimesh/myapp:latest docker/' 
 				sh 'docker login http://mycluster.icp:8500/ -u admin -p admin'
 				sh 'docker push mycluster.icp:8500/testnimesh/myapp'
 				// add the image to the repository in icp. 
+				*/
 
 			}
 		}
