@@ -30,7 +30,7 @@ pipeline {
 				}
 				} */
 				sh 'docker build -t mycluster.icp:8500/testnimesh/myapp:latest docker/' 
-				sh 'docker login https://mycluster.icp:8500/ -u admin -p admin'
+				sh 'docker login http://mycluster.icp:8500/ -u admin -p admin'
 				sh 'docker push mycluster.icp:8500/testnimesh/myapp'
 				// add the image to the repository in icp. 
 
