@@ -26,7 +26,7 @@ pipeline {
 				script {	
 			//	docker.withRegistry('https://mycluster.icp:8500',registryCredential) {
 					def image = docker.build(registry+dockerImage+":$BUILD_NUMBER", 'docker')
-					image.push()
+					image.push("latest")
 			//	}
 				}
 				//sh 'docker build -t mycluster.icp:8500/testnimesh/myapp docker/' 
