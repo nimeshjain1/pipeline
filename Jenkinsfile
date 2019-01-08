@@ -7,6 +7,7 @@ pipeline {
 		registry = 'mycluster.icp:8500/testnimesh'
 		registryCredential='icpcredentials'
 		dockerImage = '/myapp'
+		customImage = ''
 	}
 	agent any
 	stages {
@@ -22,12 +23,10 @@ pipeline {
 		{
 		    steps{
 				echo "step 2 baking image";
-				dir('docker'){
 				script {	
-				docker.build registry+dockerImage+":$BUILD_NUMBER"
 				docker.withRegistry('',registryCredential) {
-					(registry+dockerImage+":$BUILD_NUMBER").push()
-				}
+					def image = docker.build(registry+dockerImage+":$BUILD_NUMBER", 'docker')
+					image.push()
 				}
 				}
 				//sh 'docker build -t mycluster.icp:8500/testnimesh/myapp docker/' 
