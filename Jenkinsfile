@@ -43,6 +43,8 @@ pipeline {
 				sh 'helm lint test'
 				sh 'helm package test'
 				archiveArtifacts 'test-0.1.0.tgz'
+				sh 'bx pr login -u admin -p admin -a https://192.168.2.2:8443/'
+				sh 'bx pr load-helm-chart --archive test-0.1.0.tgz --clusterName mycluster.icp'
 			}	
 
 		 }
