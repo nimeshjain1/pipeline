@@ -4,7 +4,7 @@ pipeline {
 	#}
 */
 	environment {
-		registry = 'http://mycluster.icp:8500/testnimesh'
+		registry = 'mycluster.icp:8500/testnimesh'
 		registryCredential='icpcredentials'
 		dockerImage = '/myapp'
 		customImage = ''
