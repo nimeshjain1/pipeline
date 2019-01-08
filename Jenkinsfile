@@ -24,7 +24,7 @@ pipeline {
 		    steps{
 				echo "step 2 baking image";
 				script {	
-				docker.withRegistry('',registryCredential) {
+				docker.withRegistry(registry,registryCredential) {
 					def image = docker.build(registry+dockerImage+":$BUILD_NUMBER", 'docker')
 					image.push()
 				}
