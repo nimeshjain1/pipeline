@@ -24,10 +24,10 @@ pipeline {
 		    steps{
 				echo "step 2 baking image";
 				script {	
-				docker.withRegistry('https://mycluster.icp:8500',registryCredential) {
+			//	docker.withRegistry('https://mycluster.icp:8500',registryCredential) {
 					def image = docker.build(registry+dockerImage+":$BUILD_NUMBER", 'docker')
 					image.push()
-				}
+			//	}
 				}
 				//sh 'docker build -t mycluster.icp:8500/testnimesh/myapp docker/' 
 				//sh 'docker login https://mycluster.icp:8500/ -u admin -p admin'
