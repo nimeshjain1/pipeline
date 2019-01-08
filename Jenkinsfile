@@ -29,16 +29,11 @@ pipeline {
 					image.push("latest")
 				}
 				} 
-				/*
-				sh 'docker build -t mycluster.icp:8500/testnimesh/myapp:latest docker/' 
-				sh 'docker login http://mycluster.icp:8500/ -u admin -p admin'
-				sh 'docker push mycluster.icp:8500/testnimesh/myapp'
-				// add the image to the repository in icp. 
-				*/
+				
 
 			}
 		}
-/*		stage ("build_helmchart")
+		stage ("build_helmchart")
 		{
 		steps{
 
@@ -52,7 +47,7 @@ pipeline {
 
 		 }
 		}
-*/
+
 
 	}
 }
