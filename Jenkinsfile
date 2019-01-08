@@ -25,6 +25,9 @@ pipeline {
 				dir('docker'){
 				script {	
 				docker.build registry+dockerImage+":$BUILD_NUMBER"
+				docker.withRegistry('',registrycredentials) {
+					(registry+dockerImage+":$BUILD_NUMBER").push()
+				}
 				}
 				}
 				//sh 'docker build -t mycluster.icp:8500/testnimesh/myapp docker/' 
