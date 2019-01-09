@@ -40,7 +40,7 @@ pipeline {
 			dir('helm') {
 				echo "deploying"
 				sh 'helm init --client-only'
-				sh 'helm lint test'
+				sh 'helm lint rrdemo'
 				sh 'helm package rrdemo'
 				archiveArtifacts 'rrdemo-0.1.1.tgz'
 				//sh 'bx pr --help'
