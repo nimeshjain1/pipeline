@@ -41,12 +41,12 @@ pipeline {
 				echo "deploying"
 				sh 'helm init --client-only'
 				sh 'helm lint test'
-				sh 'helm package test'
-				archiveArtifacts 'test-0.1.0.tgz'
+				sh 'helm package rrdemo'
+				archiveArtifacts 'rrdemo-0.1.1.tgz'
 				//sh 'bx pr --help'
 				sh 'bx pr login -u admin -p admin -a https://192.168.2.2:8443/ --skip-ssl-validation -c id-mycluster-account'
 				sh 'bx pr target -n testnimesh'
-				sh 'bx pr load-helm-chart --archive test-0.1.0.tgz'
+				sh 'bx pr load-helm-chart --archive rrdemo-0.1.1.tgz'
 			}	
 
 		 }
