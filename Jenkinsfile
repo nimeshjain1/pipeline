@@ -43,7 +43,7 @@ pipeline {
 			//	sh 'helm lint rrdemo'
 				sh 'helm package rrdemo'
 				archiveArtifacts 'rrdemo-0.1.3.tgz'
-				//sh 'bx pr --help'
+				sh 'bx pr --help'
 				sh 'bx pr login -u admin -p pM0dularc -a https://10.135.9.194:8443/ --skip-ssl-validation -c id-mycluster-account'
 				sh 'bx pr target -n testnimesh'
 				sh 'bx pr load-helm-chart --archive rrdemo-0.1.3.tgz'
