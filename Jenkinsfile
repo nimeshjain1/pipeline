@@ -19,7 +19,7 @@ pipeline {
 
 				}
 		}
-/*		stage ("build_image")
+		stage ("build_image")
 		{
 		    steps{
 				echo "step 2 baking image";
@@ -33,7 +33,7 @@ pipeline {
 
 			}
 		}
-		stage ("build_helmchart")
+/*		stage ("build_helmchart")
 		{
 		steps{
 
