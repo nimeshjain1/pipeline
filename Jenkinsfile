@@ -33,7 +33,7 @@ pipeline {
 
 			}
 		}
-/*		stage ("build_helmchart")
+		stage ("build_helmchart")
 		{
 		steps{
 
@@ -52,7 +52,7 @@ pipeline {
 
 		 }
 		}
-*/
+
 
 	}
 }
