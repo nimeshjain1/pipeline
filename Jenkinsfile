@@ -45,8 +45,7 @@ pipeline {
 				archiveArtifacts 'rrdemo-0.1.3.tgz'
 				//sh 'bx plugin list'
 				//sh 'bx pr --help'
-				sh 'cloudctl login -u admin -p admin -a https://10.135.9.194:8443/ --skip-ssl-validation -c id-mycluster-account'
-				sh 'cloudctl target -n testnimesh'
+				sh 'cloudctl login -u admin -p admin -a https://10.135.9.194:8443/ --skip-ssl-validation -c id-mycluster-account -n testnimesh'
 				sh 'cloudctl load-helm-chart --archive rrdemo-0.1.3.tgz'
 			}	
 
